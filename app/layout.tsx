@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import Navbar from "@/components/navbar";
 import "./globals.css";
+import TestimonialFooter from "@/components/testimonial-footer";
 
 const inter = Open_Sans({ subsets: ["latin"] });
 
@@ -21,7 +22,10 @@ export default function RootLayout({
         className={`${inter.className} h-screen grid grid-rows-layout lg:grid-rows-none lg:grid-cols-layout`}
       >
         <Navbar />
-        <main className="text-center p-4">{children}</main>
+        <main className="text-center p-4 mx-auto">
+          {children}
+          <TestimonialFooter />
+        </main>
       </body>
     </html>
   );

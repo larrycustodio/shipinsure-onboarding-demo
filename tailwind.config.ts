@@ -22,6 +22,9 @@ const config: Config = {
           "tint-2": "#A3ACFF",
         },
         slate: "#3D5781",
+        surface: {
+          6: "#06001E1F",
+        },
       },
       fontSize: {
         "2xs": ".625rem", // 10px
@@ -29,6 +32,12 @@ const config: Config = {
       lineHeight: {
         "3.5": "0.875rem", // 14px
       },
+      spacing: {
+        12.5: "3.125rem", // 50px
+        "7.5": "1.875rem", // 30px
+        25: "6.25rem", // 100px
+      },
+      gap: {},
       boxShadow: {
         nav: "0px 20px 24px -4px rgba(0, 0, 0, 0.08)",
       },

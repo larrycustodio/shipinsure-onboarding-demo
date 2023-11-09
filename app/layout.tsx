@@ -27,7 +27,9 @@ export default function RootLayout({
         <Navbar />
         <main className="text-center p-4 lg:py-[78px]">
           {children}
-          <TestimonialFooter />
+          <div className="mt-25">
+            <TestimonialFooter />
+          </div>
         </main>
       </body>
     </html>

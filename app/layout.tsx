@@ -4,7 +4,10 @@ import Navbar from "@/components/navbar";
 import "./globals.css";
 import TestimonialFooter from "@/components/testimonial-footer";
 
-const inter = Open_Sans({ subsets: ["latin"] });
+const openSans = Open_Sans({
+  style: ["normal"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "ShipInsure Onboarding",
@@ -19,10 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} h-screen grid grid-rows-layout lg:grid-rows-none lg:grid-cols-layout`}
+        className={`${openSans.className} h-screen grid grid-rows-layout lg:grid-rows-none lg:grid-cols-layout`}
       >
         <Navbar />
-        <main className="text-center p-4 mx-auto">
+        <main className="text-center p-4 lg:py-[78px]">
           {children}
           <TestimonialFooter />
         </main>

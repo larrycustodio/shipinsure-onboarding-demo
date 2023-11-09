@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function TestimonialFooter() {
   return (
-    <div className="max-w-[590px] px-2 lg:px-0 flex flex-col gap-5">
+    <section className="max-w-[590px] px-2 lg:px-0 flex flex-col gap-5 mx-auto">
       <div className="flex gap-7.5 justify-center">
         {[...Array(5)].map((_, i) => (
           <Image
@@ -26,6 +26,6 @@ export default function TestimonialFooter() {
         </div>
         <div className="text-base font-bold">June 2023</div>
       </div>
-    </div>
+    </section>
   );
 }

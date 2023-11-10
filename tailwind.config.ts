@@ -24,6 +24,7 @@ const config: Config = {
           "tint-1": "#8591FF",
           "tint-2": "#A3ACFF",
         },
+        "purely-heaven": "#F4F4F9",
         slate: "#3D5781",
         surface: {
           6: "#06001E1F",
@@ -31,6 +32,9 @@ const config: Config = {
       },
       fontSize: {
         "2xs": ".625rem", // 10px
+      },
+      height: {
+        14: "3.5rem", // 56px
       },
       lineHeight: {
         "3.5": "0.875rem", // 14px

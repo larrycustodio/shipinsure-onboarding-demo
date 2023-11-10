@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-export default function TestimonialFooter() {
+export default function Testimonial() {
   return (
-    <section className="max-w-[590px] px-2 lg:px-0 flex flex-col gap-5 mx-auto">
+    <section className="mt-25 max-w-[590px] px-2 lg:px-0 flex flex-col gap-5 mx-auto">
       <div className="flex gap-7.5 justify-center">
         {[...Array(5)].map((_, i) => (
           <Image

@@ -17,7 +17,7 @@ export default function UserProfile() {
         subheading="Let's make this easy--Please verify the information below is correct."
       />
       <form
-        className="flex flex-col gap-2.5 max-w-[416px] mx-auto"
+        className="flex flex-col gap-2.5 max-w-form-wrapper mx-auto"
         onSubmit={handleSubmit}
       >
         <TextInput id="store-name" type="text" label="Store Name" required />

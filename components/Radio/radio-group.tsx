@@ -10,7 +10,7 @@ export default function RadioGroup(props: RadioGroupProps) {
       <div className="hidden" id={id}>
         {label}
       </div>
-      <div className="grid gap-2.5 grid-cols-1">{children}</div>
+      <div className="grid gap-5 grid-cols-1">{children}</div>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import Navbar from "@/components/navbar";
 import "./globals.css";
-import TestimonialFooter from "@/components/testimonial-footer";
+import Testimonial from "@/components/testimonial";
 
 const openSans = Open_Sans({
   style: ["normal"],
@@ -27,9 +27,7 @@ export default function RootLayout({
         <Navbar />
         <main className="text-center p-4 lg:py-[78px]">
           {children}
-          <div className="mt-25">
-            <TestimonialFooter />
-          </div>
+          <Testimonial />
         </main>
       </body>
     </html>

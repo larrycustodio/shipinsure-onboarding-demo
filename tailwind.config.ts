@@ -9,7 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        gray10: "#1A1A1A",
+        gray: {
+          10: "#1A1A1A",
+          85: "#D9D9D9",
+        },
         "utility-purple": "#6675FF",
         "neutral-midnight": {
           0: "#06001E",
@@ -33,9 +36,13 @@ const config: Config = {
         "3.5": "0.875rem", // 14px
       },
       spacing: {
-        12.5: "3.125rem", // 50px
         "7.5": "1.875rem", // 30px
+        12.5: "3.125rem", // 50px
         25: "6.25rem", // 100px
+        30: "7.5rem", // 120px
+      },
+      maxWidth: {
+        "form-wrapper": "416px",
       },
       gap: {},
       boxShadow: {

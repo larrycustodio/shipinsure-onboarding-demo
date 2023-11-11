@@ -24,6 +24,7 @@ const config: Config = {
           "tint-1": "#8591FF",
           "tint-2": "#A3ACFF",
         },
+        "purely-heaven": "#F4F4F9",
         slate: "#3D5781",
         surface: {
           6: "#06001E1F",
@@ -31,6 +32,14 @@ const config: Config = {
       },
       fontSize: {
         "2xs": ".625rem", // 10px
+      },
+      height: {
+        14: "3.5rem", // 56px
+      },
+      letterSpacing: {
+        heading: "0.15px",
+        "heading-lg": "0.18px",
+        base: "0.25px",
       },
       lineHeight: {
         "3.5": "0.875rem", // 14px
@@ -41,10 +50,12 @@ const config: Config = {
         25: "6.25rem", // 100px
         30: "7.5rem", // 120px
       },
+      margin: {
+        23: "5.75rem", // 92px
+      },
       maxWidth: {
         "form-wrapper": "416px",
       },
-      gap: {},
       boxShadow: {
         nav: "0px 20px 24px -4px rgba(0, 0, 0, 0.08)",
       },

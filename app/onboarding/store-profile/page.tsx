@@ -4,13 +4,29 @@ import Button from "@/components/button";
 import Heading from "@/components/heading";
 import { RadioGroup, RadioInput } from "@/components/Radio";
 import { ChangeEvent, useState } from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { useRouter } from "next/navigation";
+
+type Inputs = {
+  "orders-count": string;
+};
 
 export default function StoreProfile() {
-  const [selectedOption, setSelectedOption] = useState<string>();
+  const router = useRouter();
 
-  const changeOption = (e: ChangeEvent<HTMLInputElement>) => {
-    setSelectedOption(e.target.value);
-  };
+  const { values, isValid, handleChange, handleSubmit } = useFormik<Inputs>({
+    initialValues: {
+      "orders-count": "",
+    },
+    validationSchema: Yup.object({
+      "orders-count": Yup.string().required("Select one of the options"),
+    }),
+    validateOnMount: true,
+    onSubmit: () => {
+      router.push("/onboarding/billing");
+    },
+  });
 
   return (
     <section>
@@ -18,7 +34,7 @@ export default function StoreProfile() {
         heading="Tell us a bit about your store"
         subheading="We’d love to hear more about your Shopify experience. On average, how many orders do you typically receive each month?"
       />
-      <div className="max-w-form-wrapper mx-auto">
+      <form onSubmit={handleSubmit} className="max-w-form-wrapper mx-auto">
         <RadioGroup id="orders-counts" label="Estimated Number of orders">
           {[
             {
@@ -48,20 +64,22 @@ export default function StoreProfile() {
             },
           ].map(({ id, value, label }) => (
             <RadioInput
-              name="ord ers-count"
+              name="orders-count"
               key={id}
               id={id}
               value={value}
-              checked={selectedOption === value}
+              checked={values["orders-count"] === value}
               label={label}
-              onChange={changeOption}
+              onChange={handleChange}
             />
           ))}
         </RadioGroup>
         <div className="mt-30 lg:mt-12.5">
-          <Button type="submit">Confirm</Button>
+          <Button type="submit" disabled={!isValid}>
+            Confirm
+          </Button>
         </div>
-      </div>
+      </form>
     </section>
   );
 }

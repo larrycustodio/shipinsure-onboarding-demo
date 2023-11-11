@@ -16,6 +16,7 @@ export default function Button(props: ButtonProps) {
             variant === "primary",
           "text-neutral-midnight-0 bg-purely-heaven border-neutral-midnight-0":
             variant === "secondary",
+          "opacity-50 cursor-not-allowed": buttonProps.disabled,
         }
       )}
     >

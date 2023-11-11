@@ -23,12 +23,41 @@ export default function StoreProfile() {
         onSubmit={handleSubmit}
       >
         <div className="col-span-2">
-          <TextInput id="card-number" type="text" label="Card Number" />
+          <TextInput
+            id="card-number"
+            type="text"
+            label="Card Number"
+            placeholder="1111 2222 3333 4444"
+          />
         </div>
-        <TextInput id="expiration" type="text" label="Expiration" required />
-        <TextInput id="CVC" type="text" label="CVC" required />
-        <TextInput id="country" type="text" label="Country" required />
-        <TextInput id="zipcode" type="text" label="Zip Code" required />
+        <TextInput
+          id="expiration"
+          type="text"
+          label="Expiration"
+          placeholder="MM/YY"
+          required
+        />
+        <TextInput
+          id="CVC"
+          type="text"
+          label="CVC"
+          placeholder="123"
+          required
+        />
+        <TextInput
+          id="country"
+          type="text"
+          label="Country"
+          placeholder="USA"
+          required
+        />
+        <TextInput
+          id="zipcode"
+          type="text"
+          label="Zip Code"
+          placeholder="123456"
+          required
+        />
 
         <div className="flex flex-col gap-5 col-span-2 mt-10 lg:mt-5">
           <Button type="submit">Next</Button>

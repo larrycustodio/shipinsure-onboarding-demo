@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react";
+import { clsx } from "clsx";
 
 type RadioGroupProps = {
   label: string;
@@ -13,9 +14,13 @@ export default function RadioInput(props: RadioGroupProps) {
   const { id, name, value, label, checked, onChange } = props;
   return (
     <div
-      className={`flex items-center px-4 py-2.5 gap-5 border ${
-        checked ? "border-calming-breeze-tint-0 " : "border-gray-85"
-      } rounded-lg hover:border-calming-breeze-tint-0`}
+      className={clsx(
+        "flex items-center px-4 py-2.5 gap-5 border rounded-lg hover:border-calming-breeze-tint-0",
+        {
+          "border-calming-breeze-tint-0": checked,
+          "border-gray-85": !checked,
+        }
+      )}
     >
       <input
         id={id}

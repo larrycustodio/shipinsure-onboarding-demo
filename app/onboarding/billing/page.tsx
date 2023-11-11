@@ -5,6 +5,7 @@ import TextInput from "@/components/text-input";
 import { FormEvent } from "react";
 import Button from "@/components/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function StoreProfile() {
   const handleSubmit = (e: FormEvent) => {
@@ -29,9 +30,11 @@ export default function StoreProfile() {
         <TextInput id="country" type="text" label="Country" required />
         <TextInput id="zipcode" type="text" label="Zip Code" required />
 
-        <div className="flex flex-col gap-5 col-span-2 mt-12.5 lg:mt-10">
+        <div className="flex flex-col gap-5 col-span-2 mt-10 lg:mt-10">
           <Button type="submit">Next</Button>
-          <div className="text-neutral-midnight-0 text-base">or</div>
+          <div className="text-neutral-midnight-0 text-xl leading-[27px]">
+            or
+          </div>
           <Button type="button" variant="secondary">
             <Image
               className="mx-auto"
@@ -43,6 +46,11 @@ export default function StoreProfile() {
           </Button>
         </div>
       </form>
+      <div className="mt-7.5 hidden lg:block">
+        <Link className="text-base underline " href="/onboarding/store-profile">
+          Go Back
+        </Link>
+      </div>
     </section>
   );
 }

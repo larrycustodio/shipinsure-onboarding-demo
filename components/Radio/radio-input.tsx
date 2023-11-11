@@ -15,7 +15,7 @@ export default function RadioInput(props: RadioGroupProps) {
   return (
     <div
       className={clsx(
-        "flex items-center px-4 py-2.5 gap-5 border rounded-lg hover:border-calming-breeze-tint-0",
+        "flex items-center px-4 py-[9px] gap-5 border rounded-lg hover:border-calming-breeze-tint-0",
         {
           "border-calming-breeze-tint-0": checked,
           "border-gray-85": !checked,

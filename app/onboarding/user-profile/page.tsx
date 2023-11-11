@@ -24,7 +24,7 @@ export default function UserProfile() {
         <TextInput id="full-name" type="text" label="Full Name" required />
         <TextInput id="email" type="email" label="Email Address" required />
         <TextInput id="store-url" label="Store URL" required />
-        <div className="mt-11 mb-2.5 lg:mt-10">
+        <div className="mt-11 mb-2.5 lg:mt-7.5">
           <Button type="submit">Confirm</Button>
         </div>
       </form>

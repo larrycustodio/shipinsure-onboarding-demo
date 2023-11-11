@@ -37,6 +37,8 @@ const config: Config = {
         14: "3.5rem", // 56px
       },
       letterSpacing: {
+        heading: "0.15px",
+        "heading-lg": "0.18px",
         base: "0.25px",
       },
       lineHeight: {

@@ -30,7 +30,7 @@ export default function StoreProfile() {
         <TextInput id="country" type="text" label="Country" required />
         <TextInput id="zipcode" type="text" label="Zip Code" required />
 
-        <div className="flex flex-col gap-5 col-span-2 mt-10 lg:mt-10">
+        <div className="flex flex-col gap-5 col-span-2 mt-10 lg:mt-5">
           <Button type="submit">Next</Button>
           <div className="text-neutral-midnight-0 text-xl leading-[27px]">
             or
@@ -46,7 +46,7 @@ export default function StoreProfile() {
           </Button>
         </div>
       </form>
-      <div className="mt-7.5 hidden lg:block">
+      <div className="mt-7.5 hidden lg:block lg:mt-6">
         <Link className="text-base underline " href="/onboarding/store-profile">
           Go Back
         </Link>
